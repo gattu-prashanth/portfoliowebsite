@@ -406,14 +406,32 @@ window.addEventListener('load', function() {
 });
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+    // Form submission will still go to Formspree
+    // This just adds custom confirmation handling
+    var form = this;
     
-    emailjs.init("YOUR_USER_ID");
-    
-    emailjs.sendForm('gmail', 'template_id', this)
-        .then(function() {
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Form submission was successful
+            form.reset();
             alert('Message sent successfully!');
-        }, function(error) {
-            alert('Failed to send message. Error: ' + JSON.stringify(error));
-        });
+        } else {
+            // Form submission failed
+            response.json().then(data => {
+                alert('Failed to send message. Error: ' + JSON.stringify(data));
+            });
+        }
+    })
+    .catch(error => {
+        alert('An error occurred while submitting the form.');
+    });
+    
+    event.preventDefault();
 });
