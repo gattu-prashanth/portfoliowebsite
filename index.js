@@ -1,4 +1,13 @@
 // Wait for the DOM to be fully loaded
+
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 1000,  // Animation duration in ms
+        easing: 'ease-in-out',  // Animation easing
+        //once: true,  // Run only once
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile navigation toggle
     const hamburger = document.querySelector('.hamburger');

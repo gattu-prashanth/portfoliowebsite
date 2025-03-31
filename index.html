@@ -6,6 +6,9 @@
     <link rel="icon" href="portfolio-icon.png" type="image/png">
     <title>Prashanth Gattu - Portfolio</title>
     <link rel="stylesheet" href="index.css">
+    <!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234169E1'><path d='M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm11 15H4V8h16v11z'/><path d='M12 12c-1.1 0-2 .9-2 2v4h4v-4c0-1.1-.9-2-2-2z'/></svg>" type="image/svg+xml">
@@ -36,7 +39,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section  data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000" id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm <span class="highlight">Prashanth Gattu</span></h1>
@@ -50,7 +55,7 @@
             <div class="hero-image">
                 <div class="profile-image">
                     <div class="profile-placeholder">
-                        <i class="fas fa-user"></i>
+                        <i class="fa-solid fa-user-tie"></i>
                     </div>
                 </div>
             </div>
@@ -58,7 +63,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section data-aos="fade-right" id="about" class="about">
         <div class="container">
             <div class="section-title">
                 <h2>About Me</h2>
@@ -87,7 +92,7 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/gattu-prashanth-7b2699210" target="_blank" class="social-link">
+                        <a href="https://www.linkedin.com/in/prashanth-gattu-7b2699210/" target="_blank" class="social-link">
                             <i class="fab fa-linkedin"></i>
                         </a>
                         <a href="mailto:prashanthgattu70@gmail.com" class="social-link">
@@ -454,6 +459,8 @@
     <!-- JavaScript -->
     <script src="index.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 </body>
 </html>    
